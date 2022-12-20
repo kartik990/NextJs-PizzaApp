@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  padding: 50px;
+  gap: 7px;
+}
+
+.item {
+  flex: 1;
+}
+
+.title {
+  text-align: left;
+}
+
+.table {
+  border-spacing: 15px;
+  width: 100%;
+  text-align: left;
+  border: 2px solid black;
+}
+
+.buttone {
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+  background-color: rgb(182, 173, 0);
+}
+
+.buttond {
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+  background-color: crimson;
+}
+
+.buttonn {
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+  background-color: teal;
+}

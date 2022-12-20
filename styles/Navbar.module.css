@@ -1,0 +1,103 @@
+.container {
+  height: 100px;
+  padding: 0px 50px;
+  background-color: #d1411e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 4;
+}
+
+.callButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.texts {
+  color: white;
+}
+
+.text:first-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.listItem {
+  margin-left: 15px;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.listItem:hover {
+  background-color: white;
+  padding: 10px;
+  color: #d1411e;
+  border-radius: 45%;
+}
+
+.item:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart:hover {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #d1411e;
+  background-color: white;
+}

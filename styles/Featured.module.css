@@ -1,0 +1,61 @@
+.container {
+  height: calc(100vh - 100px);
+  background-color: #d1411d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  flex: 6;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pizzaImg {
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 30px;
+  color: white;
+}
+
+.title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 80px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-family: serif;
+  font-size: 60px;
+}
+
+.five {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.or {
+  font-size: larger;
+  font-size: 30px;
+}
+
+.arrowContainer {
+  cursor: pointer;
+}
