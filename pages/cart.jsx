@@ -109,7 +109,6 @@ const Cart = () => {
                 className={styles.input}
                 type="text"
                 placeholder="phone Number"
-                onChange={(e) => setAddress(e.target.value)}
               />
               <button className={styles.inbutton} onClick={createOrder}>
                 Pay On Delievery!
