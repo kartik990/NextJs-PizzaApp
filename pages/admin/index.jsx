@@ -10,7 +10,9 @@ const Admin = ({ productList, orderList }) => {
 
   const handleDel = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/products/${id}`);
+      await axios.delete(
+        `https://next-js-pizza-app-kartik990.vercel.app/api/products/${id}`
+      );
       setProducts(products.filter((product) => product._id !== id));
     } catch (err) {
       console.log(err);
@@ -19,7 +21,9 @@ const Admin = ({ productList, orderList }) => {
 
   const handleDelOrder = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/orders/${id}`);
+      await axios.delete(
+        `https://next-js-pizza-app-kartik990.vercel.app/api/orders/${id}`
+      );
       setOrders(orders.filter((order) => order._id !== id));
     } catch (err) {
       console.log(err);
@@ -30,9 +34,12 @@ const Admin = ({ productList, orderList }) => {
     const it = orders.filter((order) => order._id === id)[0];
     const newStatus = it.status == 3 ? 0 : it.status + 1;
     try {
-      const res = await axios.put(`http://localhost:3000/api/orders/${id}`, {
-        status: newStatus,
-      });
+      const res = await axios.put(
+        `https://next-js-pizza-app-kartik990.vercel.app/api/orders/${id}`,
+        {
+          status: newStatus,
+        }
+      );
       setOrders([...orders.filter((order) => order._id !== id), res.data]);
     } catch (err) {
       console.log(err);
@@ -136,8 +143,12 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  const ordersRes = await axios.get(`http://localhost:3000/api/orders`);
-  const productsRes = await axios.get(`http://localhost:3000/api/products`);
+  const ordersRes = await axios.get(
+    `https://next-js-pizza-app-kartik990.vercel.app/api/orders`
+  );
+  const productsRes = await axios.get(
+    `https://next-js-pizza-app-kartik990.vercel.app/api/products`
+  );
 
   return {
     props: {
