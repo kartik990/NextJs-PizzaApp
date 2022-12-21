@@ -33,7 +33,7 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const res = await axios.get(
-    "https://next-js-pizza-app-kartik990.vercel.app/api/products"
+    "https://next-js-pizza-app-beta.vercel.app/api/products"
   );
   return {
     props: {
