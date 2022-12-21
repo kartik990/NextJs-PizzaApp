@@ -35,10 +35,14 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const res = await axios.get(
+<<<<<<< HEAD
     "https://next-js-pizza-app-beta.vercel.app/api/products/",
     {
       headers: { "Accept-Encoding": "gzip,deflate,compress" },
     }
+=======
+    "https://next-js-pizza-app-beta.vercel.app/api/products"
+>>>>>>> 996d038627dc7b360f33b3fe75bc39ca8cc865dd
   );
 
   return {
