@@ -11,10 +11,16 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post(`http://localhost:3000/api/login`, {
-        username,
-        password,
-      });
+      await axios.post(
+        `https://next-js-pizza-app-beta.vercel.app/api/login`,
+        {
+          username,
+          password,
+        }
+        // {
+        //   headers: { "Accept-Encoding": "gzip,deflate,compress" },
+        // }
+      );
       router.push("/admin");
     } catch (err) {
       setError(true);

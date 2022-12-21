@@ -25,7 +25,13 @@ const Cart = () => {
     };
 
     try {
-      const res = await axios.post(`http://localhost:3000/api/orders`, data);
+      const res = await axios.post(
+        `https://next-js-pizza-app-beta.vercel.app/api/orders`,
+        data,
+        {
+          headers: { "Accept-Encoding": "gzip,deflate,compress" },
+        }
+      );
       dispatch(reset());
       router.push("/orders/" + res.data._id);
     } catch (err) {
