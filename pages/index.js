@@ -10,6 +10,8 @@ import styles from "../styles/Home.module.css";
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
 
+  console.log(process.env.ADMIN_PASSWORD === "passway00");
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,9 +34,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get(
-    "https://next-js-pizza-app-kartik990.vercel.app/api/products"
-  );
+  const res = await axios.get(`pages/api/products`);
   return {
     props: {
       pizzaList: res.data,

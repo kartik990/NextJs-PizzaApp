@@ -11,13 +11,10 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post(
-        `https://next-js-pizza-app-kartik990.vercel.app/api/login`,
-        {
-          username,
-          password,
-        }
-      );
+      await axios.post(`http://localhost:3000/api/login`, {
+        username,
+        password,
+      });
       router.push("/admin");
     } catch (err) {
       setError(true);
